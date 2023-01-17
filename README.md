@@ -1,7 +1,9 @@
 # 3D Novel View Synthesis
 Implementation of 3DiM ["NOVEL VIEW SYNTHESIS WITH DIFFUSION MODELS"](https://arxiv.org/pdf/2210.04628.pdf). 3DiM is a diffusion model for 3D novel view synthesis, which is able to translate a single input view into consistent and sharp completions across many views. The core component of 3DiM is a pose-conditional image-to-image diffusion model, which takes a source view and its pose as inputs, and generates a novel view for a target pose as output. This is a basic implementation of the method with k=1 conditioning. 
 
-![Result from paper](https://github.com/shiveshkhaitan/novel_view_synthesis_3d/blob/main/view_synthesis.png)
+https://3d-diffusion.github.io/
+
+![view_synthesis](https://user-images.githubusercontent.com/33219837/212821999-fbb947a1-a56c-48c7-8945-ddeacc6496c2.png "Source: https://3d-diffusion.github.io/")
 
 Training is done using JAX and FLAX. Since JAX does not have an inbuilt dataloader, we use torch.dataset for data operations. The dataloader has been adopted from [Scene Representation Networks](https://github.com/vsitzmann/scene-representation-networks). 
 
