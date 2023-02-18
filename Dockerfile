@@ -15,3 +15,5 @@ RUN pip3 install jax[cuda11_cudnn82] -f https://storage.googleapis.com/jax-relea
 
 # Directory to mount package
 RUN mkdir /home/3dim
+
+WORKDIR /home/3dim

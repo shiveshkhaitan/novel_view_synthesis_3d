@@ -32,8 +32,7 @@ To start training
 ```
 docker run -it --rm --memory '16g' --shm-size '16g' --gpus all \
 --mount type=bind,source=$PWD,target=/home/3dim 3dim \
-bash -c 'export PYTHONPATH=$PYTHONPATH:/home/3dim && \
-cd /home/3dim && python3 train.py'
+bash -c 'python3 train.py'
 ```
 
 A smaller model with the following hyperparameters is available [here](https://drive.google.com/file/d/1SEVgheRjBq3AdLMpxhnYQP0unfS0LA55/view?usp=sharing). 
