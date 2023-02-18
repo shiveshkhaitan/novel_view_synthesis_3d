@@ -1,9 +1,10 @@
-from typing import Optional
 import flax.linen as nn
 import jax
 import jax.numpy as jnp
 import numpy as onp
 import visu3d as v3d
+
+from typing import Optional
 
 nonlinearity = nn.swish
 
@@ -203,10 +204,10 @@ class ConditioningProcessor(nn.Module):
 
 class XUNet(nn.Module):
 	"""Our proposed XUNet architecture."""
-	ch: int = 256
-	ch_mult = (1, 2, 2, 4)
-	emb_ch: int = 1024
-	num_res_blocks: int = 3
+	ch: int = 32
+	ch_mult = (1, 2,)
+	emb_ch: int = 32
+	num_res_blocks: int = 2
 	attn_resolutions = (8, 16, 32)
 	attn_heads: int = 4
 	dropout: float = 0.1

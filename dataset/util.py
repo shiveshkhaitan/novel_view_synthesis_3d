@@ -1,7 +1,9 @@
-import os, struct, math
-import numpy as np
-import torch
 from glob import glob
+import math
+import numpy as np
+import os
+import struct
+import torch
 
 import cv2
 import torch.nn.functional as F

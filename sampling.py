@@ -9,9 +9,9 @@ from torch.utils import data
 from flax.training import train_state, checkpoints
 from flax.core import freeze
 
-from data_loader import SceneClassDataset
+from dataset.data_loader import SceneClassDataset
 
-from model import XUNet
+from model.xunet import XUNet
 
 def cosine_beta_schedule(timesteps, s = 0.008):
     """
@@ -106,7 +106,7 @@ train_state = train_state.TrainState.create(apply_fn=diffusion_model.apply, para
 loaded_model_state = checkpoints.restore_checkpoint(
                                                      ckpt_dir='checkpoints',   # Folder with the checkpoints
                                                      target=train_state,   # (optional) matching object to rebuild state in
-                                                     prefix='best_model'  # Checkpoint file name prefix
+                                                     prefix='model0'  # Checkpoint file name prefix
                                                    )
 if loaded_model_state is train_state:
     raise FileNotFoundError(f"Checkpoint does not exist")
