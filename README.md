@@ -15,7 +15,7 @@ Training is done using **JAX and FLAX**. The training can be **distributed** acr
 
 ```
 git clone https://github.com/shiveshkhaitan/novel_view_synthesis_3d
-cd instadeep_ml_test
+cd novel_view_synthesis_3d
 ```
 
 ### Nvidia docker
